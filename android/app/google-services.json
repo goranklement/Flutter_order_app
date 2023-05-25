@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "778994165396",
+    "firebase_url": "https://qrscannergklcl-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "qrscannergklcl",
+    "storage_bucket": "qrscannergklcl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778994165396:android:f1c455aedc673a5e187681",
+        "android_client_info": {
+          "package_name": "com.example.qr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778994165396-j2ti5475qagae2c39ogs42bpmr86funf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6810M-iKcRgRhcQ_8DvmRb12c3G9_HNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778994165396-j2ti5475qagae2c39ogs42bpmr86funf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "778994165396-79bvcb2v3s46e8nu4jejocck4fo15mbd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.qr"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
