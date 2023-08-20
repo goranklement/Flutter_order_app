@@ -6,7 +6,7 @@ import 'colors.dart';
 
 class StartView extends StatelessWidget {
   StartView({super.key});
-  String title = "TITLIĆĆĆĆ";
+  String title = "QR Order";
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +16,19 @@ class StartView extends StatelessWidget {
           title: const Text('Mobile Scanner'),
         ),
         body: Container(
-          decoration: BoxDecoration(gradient: SweepGradient(colors: [Colors.black, getColor(0xff0c1f11)])),
-         width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+              gradient:
+                  SweepGradient(colors: [Colors.black, getColor(0xff0c1f11)])),
+          width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 0.6*MediaQuery.of(context).size.width,
+                width: 0.6 * MediaQuery.of(context).size.width,
                 height: 50,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      shadowColor: getColor(0xff278a3c),
+                        shadowColor: getColor(0xff278a3c),
                         elevation: 15,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25),
@@ -34,50 +36,46 @@ class StartView extends StatelessWidget {
                         foregroundColor: getColor(0xff82ff9d),
                         backgroundColor: getColor(0xff345e3a)),
                     onPressed: () {
-                        Navigator.push(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => RegisterView(
-                                
-                                )),
+                            builder: (context) => const RegisterView()),
                       );
-
                     },
-                    child: Text("Register")),
+                    child: const Text("Register")),
               ),
-               SizedBox(height: 20),
+              const SizedBox(height: 20),
               SizedBox(
-                  width: 0.6*MediaQuery.of(context).size.width,
+                  width: 0.6 * MediaQuery.of(context).size.width,
                   height: 50,
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginView()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginView()));
                       },
                       style: ElevatedButton.styleFrom(
-                      
-                         shadowColor: getColor(0xff278a3c),
+                          shadowColor: getColor(0xff278a3c),
                           foregroundColor: getColor(0xff82ff9d),
                           backgroundColor: getColor(0xff345e3a),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(25),
-                          )
-                          ),
-                      child: Text("Login"))),
-                       SizedBox(height: 20),
+                          )),
+                      child: const Text("Login"))),
+              const SizedBox(height: 20),
               SizedBox(
-                width: 0.6*MediaQuery.of(context).size.width,
+                width: 0.6 * MediaQuery.of(context).size.width,
                 height: 50,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: getColor(0xff262626),
-                    foregroundColor: getColor(0xff82ff9d),
-                    elevation: 10,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    )
-
-                  ),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: getColor(0xff262626),
+                        foregroundColor: getColor(0xff82ff9d),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        )),
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -87,7 +85,7 @@ class StartView extends StatelessWidget {
                                 )),
                       );
                     },
-                    child: Text("Continue as a guest")),
+                    child: const Text("Continue as a guest")),
               )
             ],
           ),

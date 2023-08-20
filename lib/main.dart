@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:qr/start.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 import 'colors.dart';
 import 'QRScanner.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 
 
 
@@ -65,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               icon: ValueListenableBuilder(
                 valueListenable: cameraController.torchState,
                 builder: (context, state, child) {
-                  switch (state as TorchState) {
+                  switch (state) {
                     case TorchState.off:
                       return const Icon(Icons.no_flash, color: Colors.grey);
                     case TorchState.on:
@@ -81,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               icon: ValueListenableBuilder(
                 valueListenable: cameraController.cameraFacingState,
                 builder: (context, state, child) {
-                  switch (state as CameraFacing) {
+                  switch (state) {
                     case CameraFacing.front:
                       return const Icon(Icons.flip_camera_ios);
                     case CameraFacing.back:

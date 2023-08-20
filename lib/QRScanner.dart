@@ -17,7 +17,7 @@ class QRScanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
+        SizedBox(
           width: 400,
           height: 400,
           child: MobileScanner(
@@ -39,7 +39,7 @@ class QRScanner extends StatelessWidget {
 
         FadeTransition(
     opacity: _animation,
-    child: ElevatedButton(onPressed:null, child:  Text('Scan barcode on the table'), style: ButtonStyle(backgroundColor:MaterialStateProperty.all(getColor(0xff570606)), foregroundColor:MaterialStateProperty.all(Colors.red),)),
+    child: ElevatedButton(onPressed:null, style: ButtonStyle(backgroundColor:MaterialStateProperty.all(getColor(0xff570606)), foregroundColor:MaterialStateProperty.all(Colors.red),), child:  const Text('Scan barcode on the table'),),
       ),
       ],
     );
